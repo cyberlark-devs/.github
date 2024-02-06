@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    font-family: "Consolas";
+    overflow: hidden; /* Hide the scrollbar for the entire page */
+}
+
+#fixed-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: #3a3e3f;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#scrollable-section {
+    margin-left: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100vh;
+    overflow-y: scroll; /* Enable vertical scrolling for this section */
+}
+
+/* Add more styling as needed */
