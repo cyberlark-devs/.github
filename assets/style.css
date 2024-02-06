@@ -10,13 +10,15 @@ body {
     left: 0;
     width: 50%;
     height: 100vh;
-    background-color: #3a3e3f;
+    background-color: #030717;
     color: #fff;
     padding: 20px;
     box-sizing: border-box;
 }
 
 #scrollable-section {
+    background-color:#030619;
+    color:white;
     margin-left: 50%;
     padding: 20px;
     box-sizing: border-box;
@@ -25,3 +27,90 @@ body {
 }
 
 /* Add more styling as needed */
+
+/* General */
+.title {
+    font-size: 75px;
+}
+/* Updated Project Section Styles */
+.project-section {
+    border-radius: 5px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+  .grid-project {
+    display: grid;
+    grid-gap: 1%;
+    margin: 2%;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .grid-project .project-item {
+    border-radius: 15px;
+    transition: .5s ease;
+    padding: 5%;
+    height: auto;
+  }
+ 
+  
+  .grid-project .project-item:hover {
+    background: #6b6b6b3f;
+  }
+  
+  .grid-project .project-item .project-tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 2px;
+  }
+  
+  .grid-project .project-item .project-tag span {
+    background: #fff;
+    color: #000;
+    border-radius: 25px;
+    padding: 5px;
+    white-space: nowrap;
+  }
+  
+  .grid-project a {
+    text-decoration: none;
+    color: white;
+    text-overflow: clip;
+  }
+  
+  .grid-project .project-item h3 {
+    font-size: 24px;
+    text-align: left;
+  }
+  
+  .grid-project .project-item p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+/* Responsivity */
+@media screen and (max-width:768px) {
+    body {
+        overflow: visible;
+    }
+    #fixed-section {
+        position: relative;
+        box-sizing: none;
+        height: auto;
+        width:auto;
+        margin:0
+    }
+    #scrollable-section {
+        overflow-y: auto;
+        height: auto;
+        width:auto;
+        margin: 0;
+    }
+    .title {
+        font-size: 40px;
+    }
+}
