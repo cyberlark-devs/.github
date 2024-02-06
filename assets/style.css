@@ -41,17 +41,11 @@ body {
 
 #header-image {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
+
+  height:50px;
+  width: 50px;
 }
 
-#top-right-text {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: lightgray;
-  font-size: 16px;
-}
 
 .icons {
   font-size: 50px;
@@ -67,30 +61,29 @@ body {
 /* Updated Project Section Styles */
 .project-section {
   border-radius: 5px;
-  text-align: left; /* Set text alignment to left */
+  align-items: center;
+  text-align: center;
 }
+
 
 .grid-project {
   display: grid;
   grid-gap: 1%;
   margin: 2%;
+  align-items: center;
+  text-align: left;
 }
 
 .grid-project .project-item {
-  border-radius: 10px;
+  border-radius: 15px;
   transition: .5s ease;
-  padding: 3%;
+  padding: 5%;
   height: auto;
-  color: rgb(218, 215, 215);
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
+
 
 .grid-project .project-item:hover {
   background: #6b6b6b3f;
-  color: #fff;
 }
 
 .grid-project .project-item .project-tag {
@@ -108,21 +101,6 @@ body {
   white-space: nowrap;
 }
 
-.grid-project .project-item .project-logo {
-  height: 70px;
-  width: 70px;
-  border-radius: 15px;
-  margin-bottom: 10px;
-}
-
-.grid-project .project-item .project-info {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  color: lightgray;
-  font-size: 14px;
-}
-
 .grid-project a {
   text-decoration: none;
   color: white;
@@ -131,15 +109,19 @@ body {
 
 .grid-project .project-item h3 {
   font-size: 24px;
-  text-align: left; /* Align title to the left */
-  margin-bottom: 2%;
+  text-align: left;
 }
 
 .grid-project .project-item p {
   font-size: 16px;
-  color: #fff;
+  line-height: 1.5;
 }
+.grid-project .project-item .project-logo{
+  height: 100px;
+  width: 100px;
+  border-radius: 15px;
 
+}
 /* Move icons to the bottom on small screens */
 @media screen and (max-width: 768px) {
   body {
@@ -166,6 +148,7 @@ body {
 
   .icons {
       order: 1;
-      margin-top: 20px; /* Add margin to separate icons from projects on mobile */
+      margin-top: 20px;
   }
 }
+
