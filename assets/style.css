@@ -1,10 +1,9 @@
 body {
     margin: 0;
     font-family: "Consolas";
-    overflow: hidden; /* Hide the scrollbar for the entire page */
     background-color: #030717;
-} 
-
+    overflow: hidden; /* Hide the scrollbar for the entire page */
+}
 #fixed-section {
     position: fixed;
     top: 0;
@@ -127,7 +126,7 @@ body {
         margin:0
     }
     #scrollable-section {
-        overflow-y: auto;
+        overflow-y: hidden;
         height: auto;
         width:auto;
         margin: 0;
