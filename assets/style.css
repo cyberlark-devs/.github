@@ -16,6 +16,7 @@ body {
   padding: 20px;
   box-sizing: border-box;
   transition: .3s ease;
+
 }
 
 #scrollable-section {
@@ -39,9 +40,7 @@ body {
   justify-content: center;
 }
 
-#header-image {
-  display: inline-block;
-
+.header-image {
   height:50px;
   width: 50px;
 }
@@ -122,33 +121,25 @@ body {
   border-radius: 15px;
 
 }
-/* Move icons to the bottom on small screens */
-@media screen and (max-width: 768px) {
+/* Responsivity */
+@media screen and (max-width:768px) {
   body {
       overflow: visible;
   }
-
-  #fixed-section,
-  #scrollable-section {
-      width: 100%;
-      margin-left: 0;
+  #fixed-section {
+      position: relative;
+      box-sizing: none;
+      height: auto;
+      width:auto;
+      margin:0
   }
-
+  #scrollable-section {
+      overflow-y: auto;
+      height: auto;
+      width:auto;
+      margin: 0;
+  }
   .title {
       font-size: 40px;
   }
-
-  #header-image {
-      display: none;
-  }
-
-  #top-right-text {
-      font-size: 14px;
-  }
-
-  .icons {
-      order: 1;
-      margin-top: 20px;
-  }
 }
-
