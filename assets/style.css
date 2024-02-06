@@ -37,6 +37,12 @@ body {
 }
 .icons {
     font-size: 50px;
+    text-decoration: none;
+    color:lightgray;
+    transition:.3s ease;
+}
+.icons:hover {
+    color:white
 }
 /* Project Section Styles */
 .project-section {
