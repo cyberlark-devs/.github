@@ -1,137 +1,168 @@
 body {
-    margin: 0;
-    font-family: "Consolas";
-    background-color: #030717;
-    overflow: hidden; /* Hide the scrollbar for the entire page */
+  margin: 0;
+  font-family: "Consolas";
+  background-color: #030717;
+  overflow: hidden; /* Hide the scrollbar for the entire page */
 }
+
 #fixed-section {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100vh;
-    background-color: #030717;
-    color: #fff;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: .3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100vh;
+  background-color: #030717;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: .3s ease;
 }
 
 #scrollable-section {
-    background-color:#030619;
-    color:white;
-    margin-left: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100vh;
-    overflow-y: scroll; /* Enable vertical scrolling for this section */
-    transition: .3s ease;
+  background-color: #030619;
+  color: white;
+  margin-left: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100vh;
+  overflow-y: scroll; /* Enable vertical scrolling for this section */
+  transition: .3s ease;
 }
 
 /* Add more styling as needed */
 
 /* General */
 .title {
-    font-size: 75px;
-
+  font-size: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+#header-image {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#top-right-text {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: lightgray;
+  font-size: 16px;
+}
+
 .icons {
-    font-size: 50px;
-    text-decoration: none;
-    color:lightgray;
-    transition:.3s ease;
+  font-size: 50px;
+  text-decoration: none;
+  color: lightgray;
+  transition: .3s ease;
 }
+
 .icons:hover {
-    color:white
+  color: white;
 }
-/* Project Section Styles */
+
+/* Updated Project Section Styles */
 .project-section {
-    border-radius: 5px;
-    align-items: center;
-    text-align: center;
+  border-radius: 5px;
+  text-align: left; /* Set text alignment to left */
+}
+
+.grid-project {
+  display: grid;
+  grid-gap: 1%;
+  margin: 2%;
+}
+
+.grid-project .project-item {
+  border-radius: 10px;
+  transition: .5s ease;
+  padding: 3%;
+  height: auto;
+  color: rgb(218, 215, 215);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid-project .project-item:hover {
+  background: #6b6b6b3f;
+  color: #fff;
+}
+
+.grid-project .project-item .project-tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 2px;
+}
+
+.grid-project .project-item .project-tag span {
+  background: #fff;
+  color: #000;
+  border-radius: 25px;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.grid-project .project-item .project-logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.grid-project .project-item .project-info {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: lightgray;
+  font-size: 14px;
+}
+
+.grid-project a {
+  text-decoration: none;
+  color: white;
+  text-overflow: clip;
+}
+
+.grid-project .project-item h3 {
+  font-size: 24px;
+  text-align: left; /* Align title to the left */
+  margin-bottom: 2%;
+}
+
+.grid-project .project-item p {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* Move icons to the bottom on small screens */
+@media screen and (max-width: 768px) {
+  body {
+      overflow: visible;
   }
-  
-  
-  .grid-project {
-    display: grid;
-    grid-gap: 1%;
-    margin: 2%;
-    align-items: center;
-    text-align: left;
+
+  #fixed-section,
+  #scrollable-section {
+      width: 100%;
+      margin-left: 0;
   }
-  
-  .grid-project .project-item {
-    border-radius: 10px;
-    transition: .5s ease;
-    padding:3%;
-    height: auto;
-    color:rgb(218, 215, 215)
+
+  .title {
+      font-size: 40px;
   }
- 
-  
-  .grid-project .project-item:hover {
-    background: #6b6b6b3f;
-    color:white;
+
+  #header-image {
+      display: none;
   }
-  
-  .grid-project .project-item .project-tag {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 2px;
-  }
-  
-  .grid-project .project-item .project-tag span {
-    background: #fff;
-    color: #000;
-    border-radius: 25px;
-    padding: 5px;
-    white-space: nowrap;
-  }
-  .grid-project .project-item .project-logo{
-    height: 70px;
-    width: 70px;
-    border-radius: 15px;
- 
-  }
-  .grid-project a {
-    text-decoration: none;
-    color: white;
-    text-overflow: clip;
-  }
-  
-  .grid-project .project-item h3 {
-    font-size: 24px;
-    text-align: justify;
-    display: inline-flex;
-    margin-bottom: 2%;
-  }
-  
-  .grid-project .project-item p {
-    font-size: 16px;
-    color:#fff;
+
+  #top-right-text {
+      font-size: 14px;
   }
 
 
-/* Responsivity */
-@media screen and (max-width:768px) {
-    body {
-        overflow: visible;
-    }
-    #fixed-section {
-        position: relative;
-        box-sizing: none;
-        height: auto;
-        width:auto;
-        margin:0
-    }
-    #scrollable-section {
-        overflow-y: hidden;
-        height: auto;
-        width:auto;
-        margin: 0;
-    }
-    .title {
-        font-size: 40px;
-    }
 }
