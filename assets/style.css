@@ -35,6 +35,9 @@ body {
 .title {
     font-size: 75px;
 }
+.icons {
+    font-size: 50px;
+}
 /* Project Section Styles */
 .project-section {
     border-radius: 5px;
