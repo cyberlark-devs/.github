@@ -101,8 +101,7 @@ body {
 
 .grid-project a {
   text-decoration: none;
-  color: white;
-  text-overflow: clip;
+  color:#fff
 }
 
 .grid-project .project-item h3 {
