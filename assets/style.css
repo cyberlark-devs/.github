@@ -120,6 +120,26 @@ body {
   border-radius: 15px;
 
 }
+
+.special_links {
+  text-decoration: none;
+  display: inline-block;
+  border-bottom: 2px solid;
+  color: #9ebaee;
+  border-color: #87909c;
+  transition-property: color;
+  transition-duration: 200ms;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.special_links:hover{
+  border-color: #f0f4f8;
+  color:#fff;
+  border-bottom: 2.55px solid;
+  margin-bottom: 2.5px;
+
+}
 /* Responsivity */
 @media screen and (max-width:768px) {
   body {
