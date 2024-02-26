@@ -160,21 +160,6 @@ body {
   margin-bottom: 10px;
 }
 
-#cursor {
-  width: 2px;
-  height: 20px;
-  background-color: #fff;
-  animation: cursorBlink 0.8s infinite;
-}
-
-@keyframes cursorBlink {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
 
 #progress-bar-container {
   width: 200px;
@@ -191,6 +176,7 @@ body {
   border-radius: 10px;
   transition: width 0.5s;
 }
+
 
 
 

@@ -20,4 +20,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
+  // Simulate binary text animation
+  const binaryText = document.getElementById("binary-text");
+  setInterval(function () {
+    binaryText.textContent = generateRandomBinaryString(30);
+  }, 300);
+
+  function generateRandomBinaryString(length) {
+    const binaryArray = Array.from({ length }, () => Math.random() < 0.5 ? '0' : '1');
+    return binaryArray.join('');
+  }
   
