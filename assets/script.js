@@ -31,3 +31,63 @@ document.addEventListener("DOMContentLoaded", function () {
     return binaryArray.join('');
   }
   
+  const joystickContainer = document.getElementById('joystick-container');
+  const joystickHandle = document.getElementById('joystick-handle');
+  const fixedSection = document.getElementById('fixed-section');
+  
+  let isDragging = false;
+  
+  joystickHandle.addEventListener('mousedown', startDrag);
+  document.addEventListener('mousemove', handleDrag);
+  document.addEventListener('mouseup', endDrag);
+  
+  function startDrag(e) {
+      isDragging = true;
+  }
+  
+  function handleDrag(e) {
+      if (isDragging) {
+          const offsetX = e.clientX - joystickContainer.getBoundingClientRect().left;
+          const offsetY = e.clientY - joystickContainer.getBoundingClientRect().top;
+  
+          const x = offsetX - joystickContainer.offsetWidth / 2;
+          const y = offsetY - joystickContainer.offsetHeight / 2;
+  
+          const angle = Math.atan2(y, x);
+          const distance = Math.min(joystickContainer.offsetWidth / 2, Math.hypot(x, y));
+  
+          const newX = distance * Math.cos(angle);
+          const newY = distance * Math.sin(angle);
+  
+          joystickHandle.style.transform = `translate(${newX}px, ${newY}px)`;
+      }
+  }
+  
+  function endDrag() {
+      if (isDragging) {
+          isDragging = false;
+  
+          // Reset the joystick handle position to the center
+          joystickHandle.style.transform = 'translate(0, 0)';
+  
+          // Check if the joystick handle is close to a specific direction and open the corresponding link
+          const threshold = 15;
+          const handlePosition = joystickHandle.getBoundingClientRect();
+          const fixedSectionPosition = fixedSection.getBoundingClientRect();
+  
+          if (handlePosition.left < fixedSectionPosition.left + threshold) {
+              // Open left link (adjust the link as needed)
+              window.location.href = 'https://example.com/left';
+          } else if (handlePosition.right > fixedSectionPosition.right - threshold) {
+              // Open right link (adjust the link as needed)
+              window.location.href = 'https://example.com/right';
+          }
+          // Add more conditions for other directions as needed
+      }
+  }
+  
+  // Optional: Reset joystick handle position on window resize
+  window.addEventListener('resize', () => {
+      joystickHandle.style.transform = 'translate(0, 0)';
+  });
+  
