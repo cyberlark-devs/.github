@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function simulateLoading() {
     var progressBar = document.getElementById("progress-bar");
     var width = 0;
-    var intervalId = setInterval(frame, 20); // Adjust the interval as needed
+    var intervalId = setInterval(frame, 1); // Adjust the interval as needed
   
     function frame() {
       if (width >= 100) {
