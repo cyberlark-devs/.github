@@ -94,8 +94,10 @@ body {
 .grid-project .project-item .project-tag span {
   background: #fff;
   color: #000;
-  border-radius: 25px;
+  border-radius: 10px;
   padding: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
   white-space: nowrap;
 }
 
