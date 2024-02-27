@@ -78,6 +78,7 @@ body {
   display: flex;
   flex-direction: column; /* Updated to display items in a column */
   align-items: flex-start;
+  cursor: pointer;
 }
 
 .grid-project .project-item:hover {
