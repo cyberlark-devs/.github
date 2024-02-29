@@ -174,8 +174,17 @@ body {
   border-radius: 25px;
   padding: 5px;
   white-space: nowrap;
-  }
+}
 
+.member .position span.owner {
+  background: #bbc7f7;
+  color: #000;
+  }
+  
+  .member .position span.contributor {
+  background: #f7b7bf;
+  color: #000;
+  }
 .member-wrapper a {
   text-decoration: none;
   color: #fff;
