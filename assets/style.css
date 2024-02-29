@@ -131,13 +131,10 @@ body {
   border-radius: 15px;
 }
 
-
-/* Team Section */
-
-.grid-members {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
+/* Team */
+.member-wrapper {
+  display: flex;
+  gap: 10px;
 }
 
 .member {
@@ -146,21 +143,34 @@ body {
   padding: 10px;
   height: auto;
   display: flex;
-  flex-direction: column; /* Updated to display items in a column */
-  align-items: center;
-  text-align: center;
-  position: relative;
-  text-decoration: none;
-  color: #fff;
-  }
-  
+  gap: 10px;
+  align-items: flex-start;
+}
 
 .member:hover {
   background: #6b6b6b3f;
 }
 
-.logo-container {
-  position: relative;
+.member .logo-container {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.member .logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member .right-side {
+  flex: 1; /* Take remaining width */
+}
+
+.member h3 {
+  font-size: 24px;
+  text-align: left;
 }
 
 .member .position {
@@ -170,41 +180,26 @@ body {
   padding: 2px;
 }
 
-.member .position span {
-  border-radius: 25px;
-  padding: 5px;
-  white-space: nowrap;
-  align-items: center;
-  text-align: center;
-}
-
 .member .position span.owner {
   background: #bbc7f7;
   color: #000;
-  align-items: center;
-  text-align: center;
+  border-radius: 25px;
+  padding: 5px;
+  white-space: nowrap;
 }
-  
-  .member .position span.contributor {
-  background: #f7b7bf;
+
+.member .position span.contributor {
+  background: #ffcccb;
   color: #000;
+  border-radius: 25px;
+  padding: 5px;
+  white-space: nowrap;
 }
+
 .member-wrapper a {
   text-decoration: none;
   color: #fff;
 }
-
-.grid-members .member h3 {
-  font-size: 18px; /* Adjusted font size for better readability */
-  margin: 10px 0;
-  }
-
-.grid-members .member .logo {
-  height: 70px;
-  width: 70px;
-  border-radius: 50%;
-  
-  }
 .special_links {
   text-decoration: none;
   display: inline-block;
