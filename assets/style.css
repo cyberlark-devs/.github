@@ -198,8 +198,9 @@ body {
 .grid-members .member .logo {
   height: 70px;
   width: 70px;
-  border-radius: 50px;
-}
+  border-radius: 50%;
+  
+  }
 .special_links {
   text-decoration: none;
   display: inline-block;
