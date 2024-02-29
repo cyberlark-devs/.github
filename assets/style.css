@@ -146,11 +146,14 @@ body {
   padding: 10px;
   height: auto;
   display: flex;
-  flex-direction: row; /* Updated to display items in a row */
-  gap: 10px;
-  align-items: flex-start;
-
-}
+  flex-direction: column; /* Updated to display items in a column */
+  align-items: center;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  }
+  
 
 .member:hover {
   background: #6b6b6b3f;
