@@ -159,6 +159,10 @@ body {
   background: #6b6b6b3f;
 }
 
+.logo-container {
+  position: relative;
+}
+
 .member .position {
   display: flex;
   flex-wrap: wrap;
