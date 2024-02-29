@@ -174,11 +174,15 @@ body {
   border-radius: 25px;
   padding: 5px;
   white-space: nowrap;
+  align-items: center;
+  text-align: center;
 }
 
 .member .position span.owner {
   background: #bbc7f7;
   color: #000;
+  align-items: center;
+  text-align: center;
 }
   
   .member .position span.contributor {
