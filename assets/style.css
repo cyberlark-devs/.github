@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: "Consolas";
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  background: #000;
   overflow: hidden; /* Hide the scrollbar for the entire page */
 }
 #fixed-section {
@@ -129,6 +129,58 @@ body {
   height: 70px;
   width: 70px;
   border-radius: 15px;
+}
+
+
+/* Team Section */
+
+
+.member {
+  border-radius: 20px;
+  transition: 0.5s ease;
+  padding: 10px;
+  height: auto;
+  display: flex;
+  flex-direction: row; /* Updated to display items in a row */
+  gap: 10px;
+  align-items: flex-start;
+
+}
+
+.member:hover {
+  background: #6b6b6b3f;
+}
+
+.member .position {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 2px;
+}
+
+.member .position span {
+  background: #8da3ff;
+  color: #000;
+  border-radius: 25px;
+  padding: 5px;
+  white-space: nowrap;
+}
+
+.member-wrapper a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.grid-members .member h3 {
+  font-size: 24px;
+  text-align: left;
+  
+}
+
+.grid-members .member .logo {
+  height: 70px;
+  width: 70px;
+  border-radius: 50px;
 }
 .special_links {
   text-decoration: none;
