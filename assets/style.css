@@ -171,12 +171,10 @@ body {
 }
 
 .member .position span {
-  background: #bbc7f7;
-  color: #000;
   border-radius: 25px;
   padding: 5px;
   white-space: nowrap;
-}
+  }
 
 .member-wrapper a {
   text-decoration: none;
