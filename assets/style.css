@@ -179,22 +179,21 @@ body {
 .member .position span.owner {
   background: #bbc7f7;
   color: #000;
-  }
+}
   
   .member .position span.contributor {
   background: #f7b7bf;
   color: #000;
-  }
+}
 .member-wrapper a {
   text-decoration: none;
   color: #fff;
 }
 
 .grid-members .member h3 {
-  font-size: 24px;
-  text-align: left;
-  
-}
+  font-size: 18px; /* Adjusted font size for better readability */
+  margin: 10px 0;
+  }
 
 .grid-members .member .logo {
   height: 70px;
