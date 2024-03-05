@@ -185,8 +185,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  padding: 2px;
-
+  padding: 5px;
+  background: #00000023;
+  border-radius: 10px;
 }
 
 .member .position span.owner {
