@@ -99,7 +99,9 @@ body {
   transition: 0.2s ease;
   animation: textPulse 1s ease-in-out infinite alternate;
 }
-
+.title:hover{
+  font-size:80px;
+}
 @keyframes textPulse {
   from {
     opacity: 1;
@@ -137,6 +139,7 @@ body {
 .icons:hover {
   color: white;
 }
+ 
 /*Updated Project Section Styles */
 
 .project-item {
@@ -177,7 +180,6 @@ body {
 .grid-project .project-item h3 {
   font-size: 24px;
   text-align: left;
-
 }
 
 .grid-project .project-item p {
@@ -341,6 +343,9 @@ body {
   }
   .title {
       font-size: 60px;
+  }
+  .title:hover{
+    font-size:65px;
   }
   #joystick-container {
     visibility: hidden;
