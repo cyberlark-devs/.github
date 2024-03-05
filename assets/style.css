@@ -60,7 +60,9 @@ body {
   font-size: 75px;
   display: flex;
 }
-
+.heading {
+  color:#fff
+}
 .header-image {
   height: 50px;
   width: 50px;
