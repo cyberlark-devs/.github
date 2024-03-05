@@ -145,6 +145,7 @@ body {
   padding: 10px;
   height: auto;
   display: flex;
+  width: 100%;
   gap: 10px;
   align-items: flex-start;
 }
