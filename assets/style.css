@@ -60,6 +60,8 @@ body {
 .title {
   font-size: 75px;
   display: flex;
+  color:#fff;
+  transition: 0.2s ;
 }
 .heading {
   color:#fff
