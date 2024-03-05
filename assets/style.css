@@ -156,7 +156,12 @@ body {
 .project-item:hover {
   background: #6b6b6b3f;
 }
-
+.project-item:hover h3{
+  color:#fff
+}
+.project-item:hover p{
+  color:#fff
+}
 .project-item .project-tag {
   display: flex;
   flex-wrap: wrap;
