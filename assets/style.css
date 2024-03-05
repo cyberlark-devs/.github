@@ -2,9 +2,11 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background: #000;
-  overflow: hidden; /* Hide the scrollbar for the entire page */;
+  overflow: hidden; /* Hide the scrollbar for the entire page */
   scroll-behavior: smooth;
 }
+
+/* Fixed Section Animation */
 #fixed-section {
   position: fixed;
   top: 0;
@@ -17,8 +19,19 @@ body {
   box-sizing: border-box;
   transition: .3s ease;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 0.5s ease-in-out forwards;
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Joystick Animation */
 #joystick-container {
   width: 100px;
   height: 100px;
@@ -34,6 +47,16 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1001; /* Adjusted z-index */
+  animation: pulsate 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulsate {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
 }
 
 #joystick-handle {
@@ -42,47 +65,79 @@ body {
   background-color: #618afb;
   border-radius: 50%;
   transition: transform 0.1s ease;
+  transform: translate(-50%, -50%); /* Center the handle */
 }
 
+/* Scrollable Section Animation */
 #scrollable-section {
-  background: linear-gradient(70deg,#030717,#040a20);
-  color:#bbbaba;
+  background: linear-gradient(70deg, #030717, #040a20);
+  color: #bbbaba;
   margin-left: 50%;
   padding: 20px;
   box-sizing: border-box;
   height: 100vh;
   overflow-y: scroll; /* Enable vertical scrolling for this section */
+  animation: fadeInUp 0.5s ease-in-out forwards;
 }
 
-
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* General */
 .title {
   font-size: 75px;
   display: flex;
-  color:#fff;
-  transition: 0.2s ;
+  color: #fff;
+  transition: 0.2s ease;
+  animation: textPulse 1s ease-in-out infinite alternate;
 }
+
+@keyframes textPulse {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.8;
+  }
+}
+
 .heading {
-  color:#fff
+  color: #fff;
 }
+
 .header-image {
   height: 50px;
   width: 50px;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .icons {
   font-size: 50px;
   text-decoration: none;
   color: lightgray;
-  transition: 0.3s ease;
+ 
 }
-
 .icons:hover {
   color: white;
 }
-
-/* Updated Project Section Styles */
+/*Updated Project Section Styles */
 
 .project-item {
   border-radius: 15px;
